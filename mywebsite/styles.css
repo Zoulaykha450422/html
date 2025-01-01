@@ -1,0 +1,92 @@
+body {background-image: url(images/bah.JPEG);
+    background-position: center; background-size: cover; background-repeat: no-repeat;background-color: green; height: 100em;} 
+
+.navbar {width: 200px;float: right;height: 100px;padding: 0.5em 0;}
+
+.navbar ul {float: right;display: inline-flex;justify-content: center;align-items: center;}    
+
+.navbar ul li {list-style: none;margin-right: 62px;margin-top: 20px;font-size: 20px;}
+
+.navbar ul li a {text-decoration: none;color: black;font-family: 'Times New Roman';font-weight: bold;transition: 0.4s ease-in-out;}
+
+.navbar ul li a:hover {color: white;}
+
+.logo {color: orangered;font-size: 60px;font-family: 'Times New Roman', Times, serif;padding-left: 0px; padding-top: 15px;float: left;}
+
+.socials {display: flex;flex-direction: column;float: right;margin-top: 220px;} 
+
+.socials img {width: 40px;height: 40px;padding: 3px;}
+
+header {background-color: greenyellow;text-align: center;padding: 0;}
+
+h1 {font-family: 'Times New Roman', Times, serif; text-align: center;font-size: 45px;color: orangered;font-weight: bold;padding-top: 100px;}
+
+.par {background-color: green; font-family: 'Times New Roman';font-size: 20px;color: black;text-align: center;width: 50%;position: relative;margin-left: 290px;font-weight: bolder;}
+
+.about {list-style: none;font-size: 45px;font-family: 'Times New Roman';text-align: center;margin-top: 40px;padding-top: 50px;}
+
+.about h1 {font-family: 'Times New Roman', Times, serif; text-align: center;font-size: 45px;color: orangered;font-weight: bold;padding-top: 30px;}
+
+.about img {float: right;width: 150px;justify-content: space-between;}
+
+.par1 {background-color:gray; font-family: 'Times New Roman';font-size: 17px;color: white;text-align: center;width: 50%;margin: auto;}
+
+.contact {list-style: none;font-size: 20px;font-family: 'Times New Roman';text-align: center;margin-top: 40px;padding-top: 50px;}
+
+.contact h1 {font-family: 'Times New Roman', Times, serif; text-align: center;font-size: 45px;color: orangered;font-weight: bold;padding-top: 30px;}
+
+.par2 {background-color: gray; font-family: 'Times New Roman';font-size: 17px;color: orange;text-align: center;width: 50%;margin: auto;}
+
+.par3 {background-color: gray; font-family: 'Times New Roman';font-size: 17px;color: white;text-align: left;width: 50%;}
+
+body { font-family: 'Times New Roman', Times, serif;}
+
+.contact-form {background-color: #f2f2f2;padding: 20px;margin: auto;width: 25%;border: 1px solid #ccc;text-align: left;float: right;}
+
+.contact-form h2 {color: #333;text-align: center;}
+
+.contact-form form {padding: 10px;}
+
+.contact-form label {display: block;font-weight: bold;margin-top: 5px;}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {width: 100%;padding: 10px;margin-top: 5px;border: 1px solid white;}
+
+.contact-form input[type="submit"] {background-color: #333;color: white;border: none;padding: 10px 20px;cursor: pointer;margin-top: 10px;}
+
+.contact-form input[type="submit"]:hover {background-color: #555;}
+
+.semesters {list-style: none;font-size: 45px;font-family: 'Times New Roman';text-align: center;margin-top: 40px;padding-top: 50px;}
+
+.semesters h1 {font-family: 'Times New Roman', Times, serif; text-align: center;font-size: 45px;color: orangered;font-weight: bold;padding-top: 30px;}
+
+.par4 {background-color: grey; font-family: 'Times New Roman';font-size: 17px;color: white;text-align: center;width: 50%;margin: auto;}
+
+.places {list-style: none;font-size: 45px;font-family: 'Times New Roman';text-align: center;margin-top: 40px;padding-top: 50px;}
+
+.places h1 {font-family: 'Times New Roman', Times, serif; text-align: center;font-size: 45px;color: orangered;font-weight: bold;padding-top: 30px;}
+
+.places img {float: right;width: 150px;justify-content: space-between;}
+
+.par5 {background-color: gray; font-family: 'Times New Roman';font-size: 17px;color: white;text-align: center;width: 50%;margin: auto;}
+
+.accomplishments {list-style: none;font-size: 45px;font-family: 'Times New Roman';text-align: center;margin-top: 40px;padding-top: 50px;}
+
+.accomplishments h1 {font-family: 'Times New Roman', Times, serif; text-align: center;font-size: 45px;color: orangered;font-weight: bold;padding-top: 30px;}
+
+.accomplishments img {float: right;width: 150px;justify-content: space-between;}
+
+.par6 {background-color: gray; font-family: 'Times New Roman';font-size: 17px;color: white;text-align: center;width: 50%;margin: auto;}
+
+footer { background-color: grey;color: white;text-align: center; padding: 0%;}
+
+@media only screen and (min-width: 600px) { 
+    /* For tablets: */
+    .navbar {width: 80%;padding: 0;}
+}
+
+@media only screen and (min-width: 500px) {
+    /* For mobible phone: */
+    .navbar, .about, .semesters, .places, .accomplishments {width: 100%;padding: 0;}
+}

@@ -1,0 +1,83 @@
+Order.java:
+
+java
+Copy code
+public class Order {
+    private int id;
+    private String firstName;
+    private String lastName;
+    private int quantity;
+    private double price;
+
+    // Constructors, getters, and setters
+}
+
+************************************************************************
+
+CreateOrderRequest.java:
+
+java
+Copy code
+public class CreateOrderRequest {
+    private String firstName;
+    private String lastName;
+    private int quantity;
+    private double price;
+
+    // Constructors, getters, and setters
+}
+
+****************************************************************
+
+
+OrderController.java:
+
+java
+Copy code
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.HashMap;
+import java.util.Map;
+
+@RestController
+@RequestMapping("/v1/orders")
+public class OrderController {
+
+    private Map<Integer, Order> orders = new HashMap<>();
+    private int nextId = 1;
+
+    @GetMapping
+    public ResponseEntity<?> getAllOrders() {
+        return ResponseEntity.ok(orders.values());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getOrderById(@PathVariable int id) {
+        Order order = orders.get(id);
+        if (order != null) {
+            return ResponseEntity.ok(order);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PostMapping
+    public ResponseEntity<?> createOrder(@RequestBody CreateOrderRequest orderRequest) {
+        Order order = new Order(orderRequest.getFirstName(), orderRequest.getLastName(),
+                                orderRequest.getQuantity(), orderRequest.getPrice());
+        order.setId(nextId++);
+        orders.put(order.getId(), order);
+        return ResponseEntity.status(HttpStatus.CREATED).body(order);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteOrder(@PathVariable int id) {
+        if (orders.containsKey(id)) {
+            orders.remove(id);
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+}
