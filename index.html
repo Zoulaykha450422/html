@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- 
+Technical Documentation: Smart Budget Tracker System
+Architecture Overview:
+1. HTML defines the structure of the application and provides the interface components like forms and lists.
+2. CSS ensures a responsive and visually appealing design.
+3. JavaScript implements the business logic, including expense management and dynamic DOM updates.
+Created by: Dialikatou | Date: 10-19-24
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!-- 
+    Main container: 
+    Houses the app content, including the form for adding expenses, the expense list, and the total display.
+    -->
+    <div class="container">
+        <h1>Smart Budget Tracker</h1>
+        
+        <!-- Form: Captures new expenses (name and amount) -->
+        <form id="budget-form">
+            <input type="text" id="expense-name" placeholder="Expense Name" required>
+            <input type="number" id="expense-amount" placeholder="Amount" required>
+            <button type="submit">Add Expense</button>
+        </form>
+        
+        <!-- Section: Displays the list of added expenses -->
+        <h2>Expenses</h2>
+        <ul id="expense-list"></ul>
+        
+        <!-- Section: Displays the total of all expenses -->
+        <h3 id="total">Total: $0</h3>
+    </div>
+    
+    <!-- Links the external JavaScript file for functionality -->
+    <script src="script.js"></script>
+</body>
+</html>

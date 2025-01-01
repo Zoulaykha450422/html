@@ -1,0 +1,77 @@
+/* 
+Technical Documentation: Smart Budget Tracker CSS
+Architecture Overview:
+1. Provides consistent styling across all elements.
+2. Ensures a user-friendly interface with clear and readable layouts.
+3. Adds hover and transition effects for enhanced user experience.
+*/
+
+/* Global styles for the body */
+body {
+    font-family: Arial, sans-serif; /* Ensures readability */
+    background-color: orangered; /* Bright background for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Occupies full viewport height */
+}
+
+/* Styling for the container holding the app */
+.container {
+    width: 50%; /* Makes the app responsive */
+    max-width: 600px;
+    padding: 60px;
+    background: plum; /* Clean, white background for focus */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Center-aligned headings for better presentation */
+h1, h2 {
+    text-align: center;
+}
+
+/* Form styling for a clean, functional layout */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Input fields: Styled for usability */
+form input {
+    margin: 0 10px;
+    padding: 10px;
+    border: 2px solid black; /* Adds a clear border for input fields */
+    border-radius: 5px;
+}
+
+/* Submit button styling with hover effects */
+form button {
+    padding: 10px 15px;
+    background: rgba(126, 252, 0, 0.753); /* Green for action */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+form button:hover {
+    background: rgba(126, 252, 0, 0.726);
+}
+
+/* Expense list styling */
+#expense-list {
+    list-style: none;
+    padding: 0;
+}
+
+#expense-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Divider for clarity */
+}
